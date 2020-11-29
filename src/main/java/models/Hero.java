@@ -31,4 +31,28 @@ public class Hero {
             }
         }
     }
+    public String getName() {
+        return name;
+}
+    public int getAge() {
+        return age;
+    }
+    public String getSpecialPower() {
+        return specialPower;
+    }
+    public String getWeakness() {
+        return weakness;
+    }
+    public static ArrayList<Hero> getAll() {
+        return instances;
+    }
+    public static void clearAllHeroes(){
+        instances.clear();
+    }
+    public int getId() {
+        return id;
+    }public int getSquadID() {
+        return squadID;
+    }
+
 }
