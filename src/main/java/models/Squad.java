@@ -1,7 +1,7 @@
 package models;
+
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class Squad {
     private String squadName;
@@ -12,14 +12,15 @@ public class Squad {
     private int id;
 
 
+
     public Squad(String squadName, String cause, int maxSize) {
         this.squadName = squadName;
         this.cause = cause;
         this.maxSize = maxSize;
         instances.add(this);
         this.id = instances.size();
-}
-}
+
+    }
 
     public void addMember(Hero hero){
         squadMembers.add(hero);
@@ -32,6 +33,7 @@ public class Squad {
     public String getSquadName() {
         return squadName;
     }
+
     public String getCause() {
         return cause;
     }
@@ -51,6 +53,7 @@ public class Squad {
     public int getId() {
         return id;
     }
+
     public static Squad findById(int id) {
         return instances.get(id-1);
     }
