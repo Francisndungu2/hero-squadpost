@@ -3,7 +3,7 @@ package models;
 import java.util.ArrayList;
 
 public class Hero {
-    private final String name;
+    private String name;
     private int age;
     private String specialPower;
     private String weakness;

@@ -25,7 +25,6 @@ public class HeroTest {
         return new Hero("Batman", 32, "Sulking", "Robin", 1);
     }
 
-
     @Test
     public void getName_HeroInstantiatesWithName_true() throws Exception {
         Hero myHero = setUpNewHero();
@@ -43,14 +42,6 @@ public class HeroTest {
         Hero myHero = setUpNewHero();
         assertEquals("Sulking", myHero.getSpecialPower());
     }
-    @Test
-    public void AllHeroesContainsAllHeroes() {
-        Hero myHero = setUpNewHero();
-        Hero otherHero = setUpNewHero();
-        assertTrue(Hero.getAll().contains(myHero));
-        assertTrue(Hero.getAll().contains(otherHero));
-
-    }
 
     @Test
     public void getWeakness_HeroInstantiatesWithWeakness_Robin() throws Exception {
@@ -65,6 +56,13 @@ public class HeroTest {
         assertEquals(2, Hero.getAll().size());
     }
 
+    @Test
+    public void AllHeroesContainsAllHeroes() {
+        Hero myHero = setUpNewHero();
+        Hero otherHero = setUpNewHero();
+        assertTrue(Hero.getAll().contains(myHero));
+        assertTrue(Hero.getAll().contains(otherHero));
 
+    }
 
 }

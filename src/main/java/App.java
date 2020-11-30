@@ -3,7 +3,7 @@ import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
-
+//import java.lang.ProcessBuilder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ public class App {
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
-        return 4567;
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
     public static void main(String[] args) {
 
@@ -36,7 +36,7 @@ public class App {
             return new ModelAndView(model, "squad-form.hbs");
         }), new HandlebarsTemplateEngine());
 
-
+        //Captures all the form details
 
         post("/squad/new", ((request, response) -> {
             Map<String, Object> model = new HashMap<>();
