@@ -1,39 +1,4 @@
-div{
-    overflow: hidden;
-}
 
-body{
-    height:100%;
-    width:100%;
-}
-
-@media (min-width: 768px){
-.navbar {
-    border-radius: 0px;
-    }
-}
-
-th{
-    text-align:center;
-}
-
-i{
-    margin-right:3px;
-    margin-left:3px;
-}
-
- body{
-    background-image:url("/images/comics.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    }
-}
-
-body {
-    position: relative;
-    min-height: 100%;
-    margin: 0 0 80px; /* bottom = footer height */
-}
 
 .footer {
     position: relative;
@@ -43,8 +8,3 @@ body {
     width: 100%;
 }
 
-.hero-card{
-    background-image: url(/images/hero-background.jpg);
-    background-size:100% 100%;
-    background-repeat:no-repeat;
-}
