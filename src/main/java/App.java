@@ -3,6 +3,7 @@ import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +36,8 @@ public class App {
             return new ModelAndView(model, "squad-form.hbs");
         }), new HandlebarsTemplateEngine());
 
-        //Captures all the form details
+
+
         post("/squad/new", ((request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String squadName = request.queryParams("squadName");
@@ -45,6 +47,7 @@ public class App {
             return new ModelAndView(model, "success.hbs");
 
         }), new HandlebarsTemplateEngine());
+
         //View all the squads
         get("/squads", ((request, response) -> {
             Map<String, Object> model = new HashMap<>();
@@ -68,11 +71,11 @@ public class App {
 
         //get: Show a form to update a squad
         get("/squads/:id/update", ((request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            int squadIdToEdit = Integer.parseInt(request.params("id"));
-            Squad editSquad = Squad.findById(squadIdToEdit);
-            model.put("editSquad", editSquad);
-            return new ModelAndView(model, "squad-form.hbs");
+          Map<String, Object> model = new HashMap<>();
+          int squadIdToEdit = Integer.parseInt(request.params("id"));
+          Squad editSquad = Squad.findById(squadIdToEdit);
+          model.put("editSquad", editSquad);
+          return new ModelAndView(model, "squad-form.hbs");
         }), new HandlebarsTemplateEngine());
 
         //POST:process a form to update a squad
@@ -137,5 +140,3 @@ public class App {
 
     }
 }
-
-

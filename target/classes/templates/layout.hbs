@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}Squad of Heroes{{/block}}</title>
+    <link rel="shortcut icon" href="/images/favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/images/favicon.png" sizes="32x32" type="image/png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-info">
+<div>
+
+</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+        <img src="/images/favicon.png" style="height:50px;width:50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/squads">View Squads</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/squad/new">Add Squads</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container bg-secondary contents">
+    {{#block "content"}}
+    {{/block}}
+</div>
+
+<div class="footer text-center bg-dark p-3" id="contact">
+    <div class="container">
+    <p class=" text-white lead">Copyright &copy; Michael-Mbaya</p>
+    </div>
+</div>
+
+    </body>
+    </html>

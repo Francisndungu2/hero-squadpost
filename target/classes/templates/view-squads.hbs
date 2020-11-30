@@ -1,0 +1,47 @@
+{{#partial "content"}}
+    <div class="text-center my-3">
+        <h1 class="bg-secondary text-white lead py-3">Squads</h1>
+
+        {{#if squads}}
+            <div class="my-2 row justify-content-around align-items-center">
+                {{#each squads }}
+
+                    <div class="col-md-4 my-2">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">Squad: {{squadName}}</div>
+                            <div class="card-body bg-white text-danger">Max Hero Members: {{maxSize}}</div>
+                            <div class="card-footer bg-dark text-white">
+                                <p>Cause: {{cause}}</p>
+                                <p><a class="btn btn-primary" href="/squads/{{id}}">Details</a></p>
+                            </div>
+                            <div class="row justify-content-around align-items-center p-3">
+                                <a href="/squads/{{id}}/delete" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a>
+                                <a href="/squads/{{id}}/update" class="btn btn-sm btn-success"><i class="fa fa-pencil" aria-hidden="true"></i>Edit</a>
+                                <a href="/squads/{{id}}/heroes" class="btn btn-sm btn-primary">View Heroes</a>
+                                <a href="/squads/{{id}}/heroes/new" class="btn btn-sm btn-success">Add a hero</a>
+                            </div>
+                        </div>
+                    </div>
+
+                {{/each}}
+            </div>
+        {{else}}
+            <div class="container my-4 py-4">
+            <div class="jumbotron bg-transparent my-4 py-4">
+                <div class="lead text-white py-4 my-4">
+                    No Squads to display yet. Add some.
+
+                    <div class="row justify-content-around align-items-center py-2">
+                        <p><a href="/" class="btn btn-lg btn-warning">Back Home</a></p>
+                        <p><a href="/squad/new" class="btn btn-lg btn-success">Add a Squad</a></p>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+        {{/if}}
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

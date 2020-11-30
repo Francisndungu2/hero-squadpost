@@ -60,7 +60,7 @@ public class Hero {
         return id;
     }
 
-    public int getSquadID() {
+        public int getSquadID() {
         return squadID;
     }
 
