@@ -29,6 +29,12 @@ i{
     }
 }
 
+.hero-card{
+    background-image: url(/images/hero-background.jpg);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+}
+
 body {
     position: relative;
     min-height: 100%;
