@@ -19,7 +19,7 @@ a hero can only participate in one Squad at a time.
 ### Setup
 * Clone this repository unto your local machine, open in the IDE and run the command "gradle build" and "gradle run"
 ##### Or
-* Click on the link provided in the description: https://mbayaddihero.herokuapp.com/
+* Click on the link provided in the description: https://hero-squadpost.herokuapp.com/
 
 ## How to use
 1.Add a new squad
